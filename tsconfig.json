@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  // Excluding these is not cosmetic: the include globs above are project-wide,
+  // so without them the compiler and the editor's TS server walk the 1.7GB
+  // .next cache, the 480MB reference corpus and the scraped clone material on
+  // every project open. None of those directories holds a single .ts file.
+  "exclude": [
+    "node_modules",
+    ".next/cache",
+    ".next/dev/cache",
+    ".next/dev/server",
+    ".next/dev/static",
+    ".next/server",
+    ".next/static",
+    "Data",
+    "Clone_reference",
+    "Research Findings",
+    "docs",
+    "public"
+  ]
+}

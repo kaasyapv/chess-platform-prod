@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Class trouble? Here's what to do</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 3rem auto; padding: 0 1.25rem; line-height: 1.5; color: #1a1a1a; }
+  h1 { font-size: 1.25rem; }
+  .step { margin: 1.25rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 0.5rem; }
+</style>
+</head>
+<body>
+<!-- ponytail: plain static HTML on purpose — if the app itself is down or
+     failing to load, no JS bundle, no API call, and no database query can be
+     trusted to work either. This page has none of those, so it's reachable
+     even when everything else isn't. -->
+<h1>Can't load your class?</h1>
+<p>If the page is blank or won't load, the platform may be temporarily down.
+Every scheduled class has a backup meeting link that only your academy's
+manager can see — they can send it to you directly.</p>
+<div class="step"><strong>Step 1.</strong> Message your coach or academy manager
+on WhatsApp (or however you normally reach them) and say the platform isn't loading.</div>
+<div class="step"><strong>Step 2.</strong> They'll send you a Google Meet or Zoom
+link for this class — join that instead.</div>
+<div class="step"><strong>Step 3.</strong> Once the platform is back, resume there as normal.</div>
+</body>
+</html>

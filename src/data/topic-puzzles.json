@@ -1,0 +1,312 @@
+{
+ "Back-Rank Mates": [
+  {
+   "id": "04qGt",
+   "fen": "5rk1/6pp/3R4/p7/1p5q/1P1Q4/2B3PP/R3r2K w - - 1 34",
+   "moves": "a1e1 h4e1 d3f1 f8f1",
+   "rating": 811
+  },
+  {
+   "id": "01rGp",
+   "fen": "1r6/5pkp/6p1/8/8/8/1pR2PPP/rR4K1 w - - 2 39",
+   "moves": "c2b2 a1b1 b2b1 b8b1",
+   "rating": 860
+  },
+  {
+   "id": "05kni",
+   "fen": "6k1/p2N1ppp/4p3/6P1/2p2Q1P/3r4/q4P2/5RK1 b - - 0 30",
+   "moves": "d3d7 f4b8 d7d8 b8d8",
+   "rating": 903
+  },
+  {
+   "id": "05HCz",
+   "fen": "r5k1/p2b1rp1/2pP3p/4R3/8/3Q4/PB3qPP/4R2K w - - 0 29",
+   "moves": "e5e2 f2f1 e1f1 f7f1",
+   "rating": 968
+  },
+  {
+   "id": "03a1M",
+   "fen": "r5k1/ppp1Qppp/1q4b1/6r1/2P2R2/2P1P2P/PB3PP1/1R4K1 b - - 8 22",
+   "moves": "g6b1 e7f7 g8h8 f7f8 a8f8 f4f8",
+   "rating": 992
+  },
+  {
+   "id": "03Q6i",
+   "fen": "r5k1/2p2ppp/1q6/2p1P3/r7/5QB1/P4PPP/R5K1 b - - 0 27",
+   "moves": "a4a2 f3a8 a2a8 a1a8 b6b8 a8b8",
+   "rating": 1016
+  },
+  {
+   "id": "01pl8",
+   "fen": "3r4/pR1N2p1/2p2p1k/4p2p/2B1Pn1N/1P6/P1P2PPP/3R2K1 w - - 4 31",
+   "moves": "d7f6 d8d1 c4f1 f4e2 g1h1 d1f1",
+   "rating": 1090
+  },
+  {
+   "id": "05fZZ",
+   "fen": "7k/1p3qp1/pbp4p/2P5/4r3/1Q3P2/P1P3PP/7K w - - 0 29",
+   "moves": "b3f7 e4e1",
+   "rating": 1139
+  },
+  {
+   "id": "05Fi9",
+   "fen": "4r1k1/Q1p2ppp/3R4/6q1/P7/4r2P/1PP3P1/5RK1 b - - 0 21",
+   "moves": "c7d6 a7f7 g8h8 f7f8 e8f8 f1f8",
+   "rating": 1183
+  },
+  {
+   "id": "067sz",
+   "fen": "5qk1/pp4p1/6Q1/6N1/1bPp4/3n4/PP4PP/R3r1K1 w - - 3 27",
+   "moves": "a1e1 f8f2 g1h1 f2e1",
+   "rating": 1268
+  }
+ ],
+ "Forks": [
+  {
+   "id": "030gZ",
+   "fen": "4r3/3p2kp/1R1P1pp1/p1r1p3/8/N3KP2/P5PP/5R2 w - - 0 36",
+   "moves": "f1b1 c5c3 e3f2 c3a3",
+   "rating": 801
+  },
+  {
+   "id": "01lB9",
+   "fen": "1qkr3r/pp1b2p1/5p2/3Pn2p/2Pp1B2/P2B2P1/1Q3P1P/1R3RK1 w - - 2 21",
+   "moves": "b2d4 e5f3 g1g2 f3d4 f4b8 c8b8",
+   "rating": 892
+  },
+  {
+   "id": "03yBf",
+   "fen": "8/2k5/1p5R/2p1Pp1p/5P2/3PBKPr/8/4b3 w - - 3 44",
+   "moves": "f3g2 h3g3 g2f1 g3e3",
+   "rating": 964
+  },
+  {
+   "id": "06XZx",
+   "fen": "r1b1kb1r/ppp2ppp/4p3/4n3/2B3P1/2Q3P1/PPPPN1qP/RNB1K2R w KQkq - 1 11",
+   "moves": "h1g1 e5f3 c3f3 g2f3",
+   "rating": 1048
+  },
+  {
+   "id": "06IgO",
+   "fen": "3q3k/p3pr1p/2Q3p1/8/3pN3/6P1/Pr3P1P/5RK1 b - - 1 26",
+   "moves": "d4d3 c6c3 h8g8 c3b2",
+   "rating": 1128
+  },
+  {
+   "id": "060Y9",
+   "fen": "6rr/pppkq1N1/2n5/4pQp1/1b6/8/PP3PPP/R1B3K1 b - - 2 20",
+   "moves": "d7d6 f5d3 c6d4 g7f5 d6d7 f5e7",
+   "rating": 1216
+  },
+  {
+   "id": "05G4K",
+   "fen": "8/5k1p/4pp2/3p4/2bP4/BR2KP2/2r3PP/8 w - - 10 40",
+   "moves": "b3b2 c2c3 e3f2 c3a3",
+   "rating": 1346
+  },
+  {
+   "id": "053zh",
+   "fen": "3rr1k1/ppp3b1/7p/2BN2pP/2P2pb1/P2R1P2/1P4P1/2K4R b - - 0 22",
+   "moves": "g4f5 d5e7 g8f7 d3d8",
+   "rating": 1500
+  },
+  {
+   "id": "02obx",
+   "fen": "rnbqk2r/p1p1ppbp/1p1p1np1/8/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R b KQkq - 1 6",
+   "moves": "c8a6 f1a6 b8a6 d1a4 d8d7 a4a6",
+   "rating": 1629
+  },
+  {
+   "id": "00rw0",
+   "fen": "r2q3k/5Pb1/2n3Bp/3p2pP/pp1P2Q1/6B1/1PP5/6K1 b - - 0 39",
+   "moves": "g7d4 g4d4 c6d4 g3e5 d8f6 e5f6",
+   "rating": 1805
+  }
+ ],
+ "Pins": [
+  {
+   "id": "06SzP",
+   "fen": "8/p3B2p/k7/8/1R2n3/PNP5/KP5r/8 w - - 2 39",
+   "moves": "e7d8 e4c3 a2a1 h2h1 b3c1 h1c1",
+   "rating": 841
+  },
+  {
+   "id": "02ZJA",
+   "fen": "2kr4/1bp1n1pp/pp4q1/3Pn3/4P3/2NB4/PP1Q1PPP/2R1R1K1 w - - 2 18",
+   "moves": "f2f4 e5f3 g1h1 f3d2",
+   "rating": 1110
+  },
+  {
+   "id": "050MU",
+   "fen": "r3kb1r/ppp2p2/2p3p1/3PPq1p/2B5/2N1Q3/PPP2PPP/2KR4 w kq - 0 15",
+   "moves": "d5c6 f8h6 e3h6 h8h6",
+   "rating": 1265
+  },
+  {
+   "id": "01fz7",
+   "fen": "r2qkb1r/pp1Npppp/4b3/1Np5/Q1P5/8/PP1P1PPP/R1B1R1K1 b kq - 0 13",
+   "moves": "e6d7 b5d6",
+   "rating": 1352
+  },
+  {
+   "id": "02SNn",
+   "fen": "4r3/7k/6pp/2P2b2/1p1Q4/1P3p1P/P5P1/4rBK1 w - - 0 37",
+   "moves": "g2f3 f5h3 g1h2 h3f1",
+   "rating": 1477
+  },
+  {
+   "id": "01VXI",
+   "fen": "r3rk2/pppqn1pQ/6P1/4p1P1/4Pp2/1PP5/P4P2/RNB1K3 b Q - 0 20",
+   "moves": "d7g4 h7h8 e7g8 c1a3 e8e7 a3e7 f8e7 h8g7",
+   "rating": 1569
+  },
+  {
+   "id": "00eWz",
+   "fen": "4r1k1/p5bp/1q4p1/2pPrp2/1pP2N2/6PP/P4QB1/1R3RK1 w - - 2 25",
+   "moves": "f4e6 e5e6 d5e6 g7d4",
+   "rating": 1657
+  },
+  {
+   "id": "05bWa",
+   "fen": "3rr1k1/pp3ppp/1qn5/2bp1b2/2P5/PP3N1P/1B1NBRP1/R4QK1 w - - 3 17",
+   "moves": "b3b4 c5f2 f1f2 e8e2",
+   "rating": 1728
+  },
+  {
+   "id": "036Ew",
+   "fen": "3r3r/1kp3pp/ppn2p2/3B4/P2pP3/3P1P2/5P1P/2R2RK1 b - - 1 24",
+   "moves": "d8d6 c1c6 d6c6 f1c1",
+   "rating": 1811
+  },
+  {
+   "id": "0193i",
+   "fen": "r5rk/2p2p1p/1p3p2/1P1P4/q3Pp1N/7P/4QP1K/5R2 b - - 1 24",
+   "moves": "a8a5 e2b2 g8g6 h4g6 h7g6 b2f6",
+   "rating": 1896
+  }
+ ],
+ "Skewers": [
+  {
+   "id": "01DXj",
+   "fen": "8/pR6/8/P7/2Pb1rk1/1P1K4/8/8 b - - 0 39",
+   "moves": "d4g1 b7g7 g4f5 g7g1",
+   "rating": 816
+  },
+  {
+   "id": "06Prw",
+   "fen": "8/8/r7/2K4p/5k2/3P4/8/7R w - - 0 48",
+   "moves": "h1h5 a6a5 c5c4 a5h5",
+   "rating": 911
+  },
+  {
+   "id": "00PrK",
+   "fen": "r7/7R/P3k3/4p2p/3b2p1/3K4/8/5R2 b - - 7 55",
+   "moves": "a8a6 h7h6 e6d5 h6a6",
+   "rating": 968
+  },
+  {
+   "id": "03rC2",
+   "fen": "6r1/pk5r/3p4/5p2/1R2p2p/4P1P1/PP3PK1/7R b - - 1 33",
+   "moves": "b7c7 h1c1 c7d7 b4b7 d7e6 b7h7",
+   "rating": 1042
+  },
+  {
+   "id": "007tv",
+   "fen": "r3k1nr/1pp2ppp/1pnp2q1/4p1B1/2B1P3/3P1Q1P/PPP2PP1/R4RK1 b kq - 0 11",
+   "moves": "g6g5 f3f7 e8d8 f7f8 d8d7 f8a8",
+   "rating": 1140
+  },
+  {
+   "id": "05mKc",
+   "fen": "r1b1k1nr/pp6/2n5/2ppq1P1/8/4PQP1/PPPN2B1/R4RK1 b kq - 0 16",
+   "moves": "c8e6 f3f8 e8d7 f8a8",
+   "rating": 1215
+  },
+  {
+   "id": "05BZd",
+   "fen": "8/3b1k1R/1p1q4/6R1/5pP1/7P/8/5K2 b - - 1 48",
+   "moves": "f7f6 h7h6 f6g5 h6d6",
+   "rating": 1322
+  },
+  {
+   "id": "03mUY",
+   "fen": "rn1qkbnr/p1pp3p/1p2p1P1/7Q/3P4/6P1/PPP2PbP/RNB1K1NR b KQkq - 0 7",
+   "moves": "h7g6 h5g6 e8e7 c1g5 e7d6 g5d8",
+   "rating": 1447
+  },
+  {
+   "id": "02dUE",
+   "fen": "2k1r2r/ppq2p2/2pb4/2p2P1p/4P2P/1PQ1RpP1/P1P2P2/R1B3K1 w - - 0 23",
+   "moves": "e3f3 d6e5 c3e1 e5a1",
+   "rating": 1568
+  },
+  {
+   "id": "03HYt",
+   "fen": "3k4/3r4/6R1/4R2p/1p2P2P/pP1bPK2/r4NP1/8 w - - 0 42",
+   "moves": "e5h5 d3e2 f3g3 e2h5",
+   "rating": 1684
+  }
+ ],
+ "Mate in 2": [
+  {
+   "id": "04T59",
+   "fen": "6k1/1R3pp1/4n3/8/2N4P/3r4/P4PKP/8 w - - 3 41",
+   "moves": "c4e5 e6f4 g2f1 d3d1",
+   "rating": 801
+  },
+  {
+   "id": "03emm",
+   "fen": "r4qkR/p5p1/bpn1p1B1/3pP1P1/3P2P1/1Q6/P2B4/4K3 b - - 6 22",
+   "moves": "g8h8 b3h3 h8g8 h3h7",
+   "rating": 890
+  },
+  {
+   "id": "062su",
+   "fen": "8/8/4k3/2p3R1/3bBp2/4rP1P/2P1K1P1/8 w - - 3 39",
+   "moves": "e2d2 d4c3 d2c1 e3e1",
+   "rating": 964
+  },
+  {
+   "id": "02ZnU",
+   "fen": "6r1/3kR2p/2p2p2/3p1N2/8/3P2B1/pq4PP/7K b - - 0 34",
+   "moves": "d7d8 g3c7 d8c8 f5d6",
+   "rating": 1025
+  },
+  {
+   "id": "06HLr",
+   "fen": "8/6k1/6p1/6K1/5P1P/6R1/8/r7 w - - 21 53",
+   "moves": "g3e3 a1g1 e3g3 g1g3",
+   "rating": 1090
+  },
+  {
+   "id": "04jaE",
+   "fen": "5K2/pp2R1rk/1bp5/1r3p2/5B2/2P3P1/P7/4R3 b - - 2 37",
+   "moves": "b6c5 e1h1 h7g6 h1h6",
+   "rating": 1163
+  },
+  {
+   "id": "04h1H",
+   "fen": "2Q5/1P3pk1/4pq2/p2p2p1/P6p/2P4P/5r2/6RK w - - 0 39",
+   "moves": "b7b8q f6f3 g1g2 f3g2",
+   "rating": 1247
+  },
+  {
+   "id": "005Bm",
+   "fen": "4rk2/p1q5/1p3Q1b/8/1p5N/2P1p3/P3P3/2K5 b - - 0 43",
+   "moves": "c7f7 h4g6 f8g8 f6h8",
+   "rating": 1351
+  },
+  {
+   "id": "00a98",
+   "fen": "4r1k1/p4p2/1p3q1p/1P6/3b2p1/P3B1P1/Q1P2PKP/4R3 w - - 0 32",
+   "moves": "e3d4 f6f3 g2f1 f3h1",
+   "rating": 1490
+  },
+  {
+   "id": "05NFa",
+   "fen": "r2Nk2r/2p5/p2p1n2/1pb1p3/3nP1b1/1B1P2p1/PPPQ1PPP/RN3RK1 w kq - 3 15",
+   "moves": "d2g5 d4e2 g1h1 h8h2",
+   "rating": 1671
+  }
+ ]
+}

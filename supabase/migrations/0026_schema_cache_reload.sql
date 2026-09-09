@@ -1,0 +1,18 @@
+-- 0026: force PostgREST to pick up the schema after DDL.
+--
+-- "Could not find the table 'public.coach_penalties' in the schema cache" is
+-- PostgREST's error for exactly one situation: the table exists in Postgres
+-- but PostgREST's in-memory schema cache was built before it existed and
+-- nothing has told PostgREST to rebuild it. It is not a naming mismatch -- the
+-- table has had one name, coach_penalties, since it was created in 0018, and
+-- every query in the app (penalties-client.tsx, the Full Report, both Excel
+-- exports) already spells it that way.
+--
+-- Locally `supabase db reset` restarts the whole stack, so PostgREST always
+-- boots with a fresh cache and never hits this. A migration applied to an
+-- already-running project (`supabase db push`, or DDL pasted into the SQL
+-- editor) does not restart PostgREST, so its cache can go stale relative to
+-- the database. The fix is this one NOTIFY, which PostgREST listens for and
+-- reloads on -- normally automatic on Supabase-hosted projects, but cheap
+-- insurance if a prior migration landed before that listener was attached.
+notify pgrst, 'reload schema';

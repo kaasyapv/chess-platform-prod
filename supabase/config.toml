@@ -1,0 +1,17 @@
+# Supabase CLI config - enables `npx supabase start` (local stack) and
+# `npx supabase db push` (apply migrations to the linked project).
+# Defaults are fine for this project; migrations create everything else.
+project_id = "chess-platform"
+
+# Log analytics (vector/logflare) mounts the Docker Desktop socket path and
+# breaks under colima - not needed for local development.
+[analytics]
+enabled = false
+
+# seed.sql = the 7 fixed demo logins (stable UUIDs, used by docs/tests).
+# seed_factory.sql = the bulk generated dataset (hundreds of students, 200+
+# classes, attendance/finance/history) - order matters, factory builds on the
+# academy the base seed creates.
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql", "./seed_factory.sql"]

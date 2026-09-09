@@ -1,0 +1,306 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────────
+   Design tokens - premium light SaaS
+   #372FC3 brand · Inter · 10px buttons, 14px cards
+
+   LIGHT IS THE DEFAULT and it is unclassed (`:root`), so the server renders
+   the real theme and there is no dark-to-light flash on hydration. Dark is
+   the opt-in override under `.dark` (toggled in shell/sidebar.tsx).
+
+   Depth on light comes from SHADOWS, not borders: a hairline border plus a
+   soft, layered shadow. That is the whole difference between "flat boxes with
+   grey outlines" and the premium SaaS look. Shadow colour is a desaturated
+   navy (16 24 40) rather than black - black shadows on white read as dirt.
+   ────────────────────────────────────────────────────────────── */
+
+:root {
+  --background: #f7f8fa;  /* app canvas - cards float above it */
+  --foreground: #10121a;  /* near-black; pure #000 on white is harsh */
+
+  --surface-0: #f7f8fa;   /* app canvas */
+  --surface-1: #ffffff;   /* sidebar */
+  --surface-2: #ffffff;   /* cards, tables */
+  --surface-3: #f1f3f7;   /* hover / inset rows / elevated panels */
+
+  --primary: #372fc3;
+  --primary-hover: #2b249e;     /* on light, hover goes DARKER, not lighter */
+  --primary-active: #372fc3;    /* selected sidebar row */
+  --primary-foreground: #ffffff;
+
+  --muted-foreground: #6b7280;  /* secondary text - 4.7:1 on white */
+  --border: #e7e9ee;            /* hairline; the shadow does the lifting */
+  --ring: rgb(55 47 195 / 0.32);
+
+  /* Semantic colours are DARKER than their dark-theme counterparts: the
+     pastels that glow on #0a0a0a wash out to illegible on white. */
+  --destructive: #d92d20;
+  --success: #067647;
+  --warning: #b54708;
+  --live: #e04403;              /* LIVE NOW, timers, avatar chips */
+
+  --radius: 10px;               /* buttons */
+  --radius-card: 20px;          /* cards/panels - rounder, premium-SaaS read */
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+
+  /* Elevation - layered (tight contact shadow + wide ambient), which is what
+     separates a real drop-shadow from the muddy single blur. */
+  --shadow-xs: 0 1px 2px rgb(16 24 40 / 0.04);
+  --shadow-sm: 0 1px 2px rgb(16 24 40 / 0.06), 0 1px 3px rgb(16 24 40 / 0.04);
+  --shadow-md: 0 2px 4px -2px rgb(16 24 40 / 0.06), 0 4px 12px -2px rgb(16 24 40 / 0.08);
+  --shadow-lg: 0 4px 6px -2px rgb(16 24 40 / 0.05), 0 12px 32px -6px rgb(16 24 40 / 0.12);
+  --shadow-primary: 0 1px 2px rgb(16 24 40 / 0.08), 0 2px 8px -2px rgb(55 47 195 / 0.28);
+  --scrim: rgb(16 24 40 / 0.28);  /* modal backdrop */
+
+  /* Board palette - sampled from the Clone_reference classroom screenshots.
+     Drives the static MiniBoard; ChessBoard reads BOARD_THEMES instead. */
+  --board-light: #efdab4;
+  --board-dark: #b58763;
+  --board-frame: #884515;
+  --board-lastmove: #f6f085;
+  --clock-lowtime: #ff6136;
+}
+
+.dark {
+  /* Deep slate, not near-black - the old #0a0a0a/#1e1e1e pair read as a
+     mismatched grayscale next to the charcoal sidebar. One cohesive
+     blue-slate family instead: canvas -> card -> hover, each a step lighter. */
+  --background: #0b0f17;
+  --foreground: rgba(255, 255, 255, 0.92);
+
+  --surface-0: #0b0f17;
+  --surface-1: #0b0f17;
+  --surface-2: #1a2232;
+  --surface-3: #212a3d;
+
+  --primary: #372fc3;
+  --primary-hover: #4f46e5;     /* on dark, hover goes lighter */
+  --primary-active: #4f46e5;
+
+  --muted-foreground: #94a3b8;
+  --border: rgb(255 255 255 / 0.1);
+  --ring: rgb(99 102 241 / 0.55);
+
+  --destructive: #f87171;
+  --success: #4ade80;
+  --warning: #f5a623;
+  --live: #f97316;
+
+  /* On dark, elevation is carried by surface lightness, not shadow - so the
+     shadows drop back to a plain black scrim that only adds separation. */
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
+  --shadow-lg: 0 12px 32px rgb(0 0 0 / 0.55);
+  --shadow-primary: 0 2px 8px -2px rgb(79 70 229 / 0.5);
+  --scrim: rgb(0 0 0 / 0.6);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface-0: var(--surface-0);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-live: var(--live);
+  --color-scrim: var(--scrim);
+  --radius-btn: var(--radius);
+  --radius-card: var(--radius-card);
+  --font-sans: var(--font-inter);
+
+  /* → shadow-xs / shadow-sm / shadow-card / shadow-pop / shadow-primary */
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-card: var(--shadow-sm);
+  --shadow-raised: var(--shadow-md);
+  --shadow-pop: var(--shadow-lg);
+  --shadow-primary: var(--shadow-primary);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── Chrome polish (reference bundle parity) ─────────────────────────────── */
+
+/* Brand selection color */
+::selection { background: rgb(55 47 195 / 0.18); }
+.dark ::selection { background: rgb(79 70 229 / 0.35); }
+
+/* Slim, surface-tinted scrollbars (default OS bars read cheap on a dashboard).
+   On light the thumb needs to be DARKER than the track, not lighter - hence
+   the border token rather than surface-3, which is near-invisible on white. */
+* { scrollbar-width: thin; scrollbar-color: #cdd2dc transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: #cdd2dc; border-radius: 8px; }
+*::-webkit-scrollbar-thumb:hover { background: #aeb5c2; }
+*::-webkit-scrollbar-track { background: transparent; }
+.dark { scrollbar-color: var(--surface-3) transparent; }
+.dark *::-webkit-scrollbar-thumb { background: var(--surface-3); }
+.dark *::-webkit-scrollbar-thumb:hover { background: var(--border); }
+
+/* Keyboard focus - layered ring exactly like the reference
+   (0 0 0 1px canvas separator + 0 0 0 3px focus color) */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--background), 0 0 0 3px var(--ring);
+  border-radius: var(--radius);
+}
+
+/* Overlay entrance - 150ms pop (reference: transition-duration .15s,
+   cubic-bezier(.4,0,.2,1)) */
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.98) translateY(2px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.pop { animation: pop 150ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+@media (prefers-reduced-motion: reduce) { .pop { animation: none; } }
+
+/* Toast entrance - slide in from the right edge it sits against */
+@keyframes toast-in {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.toast-in { animation: toast-in 160ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+@media (prefers-reduced-motion: reduce) { .toast-in { animation: none; } }
+
+/* Chessground board fills its container as a square */
+.cg-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+/* Inside-square coordinates, WorldChess style: subtle, theme-tinted
+   (worldchess-board.md §Coordinates) */
+.cg-wrap coords {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+/* Blindfold mode: hide every piece (real, ghost, and the one being dragged)
+   while leaving the board, dests, highlights and pointer handling untouched -
+   chessground resolves clicks from board coordinates, not piece hit-testing,
+   so `visibility: hidden` keeps legal-move logic fully working. */
+.blindfold piece {
+  visibility: hidden;
+}
+
+/* Marketing landing - entrance animation (CSS-only, zero JS) */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.rise { animation: rise 0.6s ease both; }
+.rise-1 { animation-delay: 0.08s; }
+.rise-2 { animation-delay: 0.16s; }
+.rise-3 { animation-delay: 0.24s; }
+@media (prefers-reduced-motion: reduce) {
+  .rise, .rise-1, .rise-2, .rise-3 { animation: none; }
+}
+
+/* Gamify mode celebration (live classroom) */
+@keyframes gamify-pop {
+  0% { opacity: 0; transform: translateY(0) scale(0.6); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-90px) scale(1.4); }
+}
+.gamify-pop { animation: gamify-pop 1.2s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .gamify-pop { animation: none; opacity: 0; } }
+
+/* Live Ops: a class calling for help pulses red until a manager claims it. */
+@keyframes help-blink {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(220 38 38 / 0.6); border-color: rgb(220 38 38 / 0.5); }
+  50%      { box-shadow: 0 0 0 6px rgb(220 38 38 / 0); border-color: rgb(220 38 38 / 1); }
+}
+.animate-help-blink { animation: help-blink 1s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .animate-help-blink { animation: none; border-color: rgb(220 38 38 / 1); } }
+
+/* Podium gradients (leaderboard) */
+.podium-gold   { background: linear-gradient(135deg, #f5c518, #b8860b); }
+.podium-silver { background: linear-gradient(135deg, #d7d7de, #8e8e99); }
+.podium-bronze { background: linear-gradient(135deg, #cd7f32, #8b5a2b); }
+
+/* Avatar picker - a slow breath so the faces look alive, and a lift on hover.
+   Each avatar gets a slightly different delay so they do not move in lockstep. */
+@keyframes avatar-breathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.045); }
+}
+.avatar-breathe {
+  animation: avatar-breathe 3.6s ease-in-out infinite;
+  transition: transform 180ms ease-out, filter 180ms ease-out;
+}
+.avatar-breathe:hover {
+  animation-play-state: paused;
+  transform: scale(1.14);
+  filter: drop-shadow(0 6px 14px rgb(16 24 40 / 0.18));
+}
+.avatar-breathe:active { transform: scale(1.04); }
+
+/* Leaderboard: points bars grow in. */
+@keyframes grow-bar { from { width: 0; } }
+.grow-bar { animation: grow-bar 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@media (prefers-reduced-motion: reduce) { .grow-bar { animation: none; } }
+
+/* Avatar animations ported 1:1 from chesskid.com/me/shop/avatar:
+   grow-in (scale 0 -> 1.35) chained into shrink-to-size (1.35 -> 1) is their
+   signature "try it on" pop; fadeingrow mounts panels; punch is the click
+   squash (scale 1 -> .5 -> 1). */
+@keyframes ck-grow-in { 0% { transform: scale(0); } 100% { transform: scale(1.35); } }
+@keyframes ck-shrink-to-size { 0% { transform: scale(1.35); } 100% { transform: scale(1); } }
+.ck-pop {
+  animation: ck-grow-in 0.18s ease-out both, ck-shrink-to-size 0.22s ease 0.18s both;
+}
+@keyframes ck-fadeingrow { 0% { opacity: 0; transform: scale(0.4); } 100% { opacity: 1; transform: scale(1); } }
+.ck-fadeingrow { animation: ck-fadeingrow 0.3s ease-out both; }
+@keyframes ck-punch { 0% { transform: scale(1); } 40% { transform: scale(0.5); } 100% { transform: scale(1); } }
+.ck-punch { animation: ck-punch 0.3s ease both; }
+@media (prefers-reduced-motion: reduce) { .ck-pop, .ck-fadeingrow, .ck-punch { animation: none; } }
+
+/* Custom avatar idle animation (torso breathing, head bob, blink) moved to
+   framer-motion - see CustomAvatarArt in lib/avatars.tsx. It already respects
+   prefers-reduced-motion via framer-motion's useReducedMotion() hook. */
+
+/* n8n pipeline - dots travelling along the wires, and a soft pulse on nodes. */
+@keyframes flow-dot {
+  0%   { left: 0%;   opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+.flow-dot { animation: flow-dot 2.2s linear infinite; }
+
+@keyframes node-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--pulse, rgba(99, 102, 241, 0.45)); }
+  70%      { box-shadow: 0 0 0 10px transparent; }
+}
+.node-pulse { animation: node-pulse 2.2s ease-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-breathe, .flow-dot, .node-pulse { animation: none; }
+}
+
+/* Print styles for PDF export (analysis / lessons) */
+@media print {
+  body { background: #fff; color: #111; }
+  .no-print { display: none !important; }
+}

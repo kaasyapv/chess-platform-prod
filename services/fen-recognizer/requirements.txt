@@ -1,0 +1,9 @@
+# Lower bounds, not pins: pydantic-core ships prebuilt wheels per Python
+# version and the old pins had no wheel for 3.13+ (Rust build fails).
+fastapi>=0.115
+uvicorn[standard]>=0.34
+pydantic>=2.10
+# Uncomment when the pipeline in recognizer.py is implemented:
+# opencv-python-headless==4.11.0.86
+# numpy==2.2.1
+# onnxruntime==1.20.1   # or torch, for the per-cell classifier
